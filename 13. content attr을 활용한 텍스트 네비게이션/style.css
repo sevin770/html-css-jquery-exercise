@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+body {
+    color: #222;
+    line-height: 1.5em;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(180deg, #DCE35B, #45B649);
+}
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+
+.gnb {
+    background-color: #fff;
+    padding: 15px 15px 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+    margin-right: 50px;
+
+}
+.gnb a {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+.gnb a span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: .3s;
+}
+.gnb a span:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+.gnb a span:nth-child(2) {
+    top: 100%;
+    left: 0;
+    color: #45B649;
+}
+
+.gnb a:hover span:nth-child(1) {
+    top: -100%;
+}
+.gnb a:hover span:nth-child(2) {
+    top: 0;
+}
+
+.gnb2 {
+    background-color: #fff;
+    padding: 15px 15px 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+
+}
+.gnb2 a {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.gnb2 a:before, .gnb2 a:after {
+    position: absolute;
+    content: attr(data-link);
+    width: 100%;
+    transition: .3s;
+}
+.gnb2 a:before {
+    top: 0;
+    left: 0;
+}
+.gnb2 a:after {
+    top: 100%;
+    left: 0;
+    color: #45B649;
+}
+.gnb2 a:hover:before {
+    top: -100%;
+}
+.gnb2 a:hover:after {
+    top: 0;
+}
+
+
+
