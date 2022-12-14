@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+body {
+    color: #222;
+    line-height: 1.5em;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+.item {
+    width: 300px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.item input[type=text],
+.item input[type=email],
+.item input[type=tel]{
+    border: 1px solid lightgray;
+    height: 40px;
+    width: inherit;
+    border-radius: 5px;
+    padding: 10px 10px 10px 40px;
+    box-sizing: border-box;
+    outline: none;
+    transition: .3s;
+}
+.item .fa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: lightblue;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    transition: .3s;
+}
+
+.item input:focus {
+    border: 1px solid dodgerblue;
+    box-shadow: 0 0 5px dodgerblue;
+}
+.item input:focus + .fa {
+    color: dodgerblue;
+}
+
+.item input:focus::placeholder {
+    visibility: hidden;
+}
+
+
+
+
+
+.item2 {
+    width: 300px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.item2 input[type=text],
+.item2 input[type=email],
+.item2 input[type=tel]{
+    border: 1px solid lightgray;
+    height: 40px;
+    width: inherit;
+    border-radius: 5px;
+    padding: 10px 10px 10px 50px;
+    box-sizing: border-box;
+    outline: none;
+    transition: .3s;
+}
+.item2 .fa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background-color: lightblue;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    transition: .3s;
+    border-radius: 5px 0 0 5px;
+}
+
+.item2 input:focus {
+    border: 1px solid dodgerblue;
+    box-shadow: 0 0 5px dodgerblue;
+}
+.item2 input:focus + .fa {
+    background-color: dodgerblue;
+}
+
+.item2 input:focus::placeholder {
+    visibility: hidden;
+}
+
+/* 
+
+focus 클릭했을 때 이벤트
+
+.item input:focus + .fa {
+}
+
++인접선택자
+~형제선택자
+
+눌렀을 때 인풋 안에 글자 안보이게
+.item2 input:focus::placeholder {
+    visibility: hidden;
+} 
+
+*/
