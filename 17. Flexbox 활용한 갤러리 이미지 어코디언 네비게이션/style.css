@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+body {
+    color: #222;
+    font-weight: 300;
+    margin: 0;
+}
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+.gallery {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.gallery li {
+    border-right: 5px solid #000;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+.gallery li:last-child {
+    border-right: none;
+}
+.gallery li:nth-child(1) {
+    background: url(./images/artistic-image-01.jpg) no-repeat center center;
+    background-size: cover;
+}
+.gallery li:nth-child(2) {
+    background: url(./images/artistic-image-02.jpg) no-repeat center center;
+    background-size: cover;
+}
+.gallery li:nth-child(3) {
+    background: url(./images/artistic-image-03.jpg) no-repeat center center;
+    background-size: cover;
+}
+.gallery li:nth-child(4) {
+    background: url(./images/artistic-image-04.jpg) no-repeat center center;
+    background-size: cover;
+}
+.gallery li:nth-child(5) {
+    background: url(./images/artistic-image-05.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.gallery:hover li {
+    flex: 1;
+    transition: .5s;
+}
+.gallery li:hover {
+    flex: 3;
+    filter: grayscale(1)
+}
+
+.content {
+    width: 100%; /*position때문에 인라인 블록이 되서 넓이100% 넣어줘야 됨*/
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    height: 250px;
+    bottom: -250px;
+    transition: .5s;
+    padding: 50px 20px 20px 20px;
+    box-sizing: border-box;
+}
+
+.sns a {
+    color: #333;
+}
+
+.gallery li:hover .content {
+    bottom: 0;
+    transition-delay: .5s;
+}
+
+.content:before {
+    content:'';
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 70px;
+    left: 0;
+    top: -10px;
+    transform-origin: left bottom; /*기준*/
+    transform: rotate(-5deg) scale(1.3);
+}
