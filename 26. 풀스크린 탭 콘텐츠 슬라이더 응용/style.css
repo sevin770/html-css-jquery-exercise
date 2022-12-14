@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+body {
+    color: #222;
+    line-height: 1.5em;
+    font-weight: 300;
+    margin: 0;
+}
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+.tab-inner {}
+input[name=tabmenu] {
+    display: none;
+}
+.tabs {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+.items {
+    height: 100vh;
+    width: 300%;
+    transition: .5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.items div {
+    height: 100vh;
+    float: left;
+    width: 33.333%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.items div:nth-child(1) { 
+    background: url(./images/photo-01.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.items div:nth-child(2) { 
+    background: url(./images/photo-02.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.items div:nth-child(3) {
+    background: url(./images/photo-03.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.items div:nth-child(1)::before, 
+.items div:nth-child(2)::before,
+.items div:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.items div:nth-child(1)::before {
+    background: linear-gradient(135deg, gold, transparent);
+}
+.items div:nth-child(2)::before {
+    background: linear-gradient(135deg, crimson, transparent);
+}
+.items div:nth-child(3)::before {
+    background: linear-gradient(135deg, blue, transparent);
+}
+
+
+
+.items div h1 {
+    font-size: 120px;
+    font-weight: normal;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    transform: translateY(-200px);
+    opacity: 0;
+    transition: .5s;
+    transition-delay: .5s;
+}
+
+.btn {
+    position: absolute;
+    bottom: 0;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: rgba(0,0,0,.3);
+    line-height: 50px;
+}
+.btn label {
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 15px;
+}
+
+input[id=tab1]:checked ~ .tabs .items {
+    left : 0;
+}
+input[id=tab2]:checked ~ .tabs .items {
+    left : -100%;
+}
+input[id=tab3]:checked ~ .tabs .items {
+    left : -200%;
+}
+
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3] {
+    color: mediumspringgreen;
+}
+
+input[id=tab1]:checked ~ .tabs .items div:nth-child(1) h1,
+input[id=tab2]:checked ~ .tabs .items div:nth-child(2) h1,
+input[id=tab3]:checked ~ .tabs .items div:nth-child(3) h1
+{
+    transform:  translateY(200px);
+    opacity: 1;
+}
