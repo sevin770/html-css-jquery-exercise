@@ -1,0 +1,39 @@
+@use './reset.scss'; 
+
+$메인칼라 : #2a4cb2;
+
+.box {
+    width: 100%;
+}
+
+.background {
+    background-color: $메인칼라;
+}
+.main-bg h4 {
+    font-size: 16px;
+    background-color: reset.$예쁜칼라;
+}
+.main-bg button {
+    color: red;
+}
+
+.main-bg {
+    h4 {
+        font-size: 16px;
+    }
+}
+
+@mixin 폰트스타일($구멍,$구멍2){
+    font-size: $구멍;
+    letter-spacing: $구멍2;
+}
+
+h2 {
+    @include 폰트스타일(40px,1px) 
+}
+h3 {
+    @include 폰트스타일(30px,2px)  
+}
+h4 {
+    @include 폰트스타일(20px,3px) 
+}

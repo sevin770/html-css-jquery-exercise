@@ -1,0 +1,68 @@
+ul li {
+  background-color: white;
+  border: 1px solid #eee;
+  list-style: none;
+  border-bottom: 0;
+  color: #333;
+  padding: 10px;
+}
+ul :last-child {
+  border-bottom: 1px solid #eee;
+}
+ul .active {
+  background-color: rgb(54, 54, 214);
+  color: #eee;
+}
+
+.box, .box3, .box2, .box1 {
+  width: 500px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  margin: 0 auto 10px;
+}
+
+.box1 {
+  background-color: rgb(167, 235, 184);
+  color: rgb(56, 90, 63);
+}
+
+.box2 {
+  background-color: rgb(235, 195, 167);
+  color: rgb(205, 96, 71);
+}
+
+.box3 {
+  background-color: rgb(175, 167, 235);
+  color: rgb(109, 71, 205);
+}
+
+.row {
+  display: flex;
+  width: 900px;
+  border: 1px solid #333;
+  margin-bottom: 10px;
+  background-color: #eee;
+}
+.row .colA {
+  width: 50%;
+  text-align: center;
+  border-right: 1px solid #333;
+  padding: 10px;
+}
+.row .colB {
+  width: 33.333%;
+  text-align: center;
+  border-right: 1px solid #333;
+  padding: 10px;
+}
+.row .colC {
+  width: 25%;
+  text-align: center;
+  border-right: 1px solid #333;
+  padding: 10px;
+}
+.row :last-child {
+  border-right: 0;
+}/*# sourceMappingURL=style.css.map */

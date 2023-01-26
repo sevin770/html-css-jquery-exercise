@@ -1,0 +1,57 @@
+
+css대용 언어 - SASS 
+조건문,반복문,변수,함수 존재. 프로그래밍스러운 문법 존재함. 반복적인 부분 쉽게 처리 가능.
+
+VSCode에서
+Live Sass compiler 검색 후 5버전 이상 설치.
+
+SASS파일은 파일명 .scss or .sass
+(파일을sass로 만들면 괄호를 안써도 됨.)
+웹브라우저는 css만 읽을 수 있다.
+
+그래서 하단에 watch sass 누르면 변환됨.
+sass->css 컴파일 
+
+map 파일의 용도 : 크롬 개발자도구 디버깅용
+.map파일이 있으면 크롬css가 아니라 scss파일로 분석해준다.
+
+sass 왜쓰는가?
+1. 변수문법
+-어려운 단어 기억해야할 때,
+-여러 곳에 중복해서 사용할 때.
+-규칙적인 스타일을 만들 때. - 관리도 쉽고 수정도 빠르다.
+$변수명 : 저장해서 쓸 값;
+
+-SASS에서는 사칙연산이 바로 가능하다.
+(+,-는 같은 단위끼리 해야함. %는%끼리 px는px끼리)
+(*,/는 정수로)
+
+ex)
+$메인칼라 : #2a4cb2;
+$서브칼라 : #eeeeee;
+$기본사이즈 : 16px;
+.background {
+    background-color: $메인칼라;
+    font-size: ($기본사이즈 - 2px);
+}
+.box {
+    color: $서브칼라;
+    font-size: ($기본사이즈 + 2px);
+}
+
+------------------------------------------
+근데 css 기본문법에도 변수 사용할 수 있다.
+길고 복잡하니까 sass가 편하다.
+
+:root {
+    --main-color : red;
+}
+
+.background {
+    background-color: var(--main-color);
+}
+
+css 사칙연산 
+font-size: calc(40px-20px);
+이건 단위가 달라도 됨. 
+40% - 20px도 가능 

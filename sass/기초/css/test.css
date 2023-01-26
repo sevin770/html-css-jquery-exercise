@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+}
+
+.box {
+  width: 100%;
+}
+
+.background {
+  background-color: #2a4cb2;
+}
+
+.main-bg h4 {
+  font-size: 16px;
+  background-color: brown;
+}
+
+.main-bg button {
+  color: red;
+}
+
+.main-bg h4 {
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+h4 {
+  font-size: 20px;
+  letter-spacing: 3px;
+}/*# sourceMappingURL=test.css.map */

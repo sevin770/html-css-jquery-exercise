@@ -1,0 +1,68 @@
+ul {
+    li {
+        background-color: white;
+        border: 1px solid #eee;
+        list-style: none;
+        border-bottom: 0;
+        color: #333;
+        padding: 10px;
+    }
+    :last-child { border-bottom: 1px solid #eee;}
+    .active { background-color: rgb(54, 54, 214); color: #eee;}
+}
+
+@mixin box($color,$backgroundColor){
+}
+
+.box {
+    width: 500px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin: 0 auto 10px;
+}
+
+@mixin colorStyle($color,$backColor){
+    background-color: $backColor;
+    color: $color;
+}
+
+.box1 {
+    @extend .box;
+    @include colorStyle(rgb(56, 90, 63), rgb(167, 235, 184));
+}
+.box2 {
+    @extend .box;
+    @include colorStyle(rgb(205, 96, 71), rgb(235, 195, 167));
+}
+.box3 {
+    @extend .box;
+    @include colorStyle(rgb(109, 71, 205),rgb(175, 167, 235));
+}
+
+.row {
+    display: flex;
+    width: 900px;
+    border: 1px solid #333;
+    margin-bottom: 10px;
+    background-color: #eee;
+    @mixin col($width){
+        width : $width;
+        text-align: center;
+        border-right: 1px solid #333;
+        padding: 10px;
+    }
+    .colA {
+        @include col(50%);
+    }
+    .colB {
+        @include col(33.333%);
+    } 
+    .colC {
+        @include col(25%);
+    } 
+    :last-child { border-right: 0;}
+}
+
+

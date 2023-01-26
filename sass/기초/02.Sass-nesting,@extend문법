@@ -1,0 +1,51 @@
+- SASS
+
+파일을sass로 만들면 괄호를 안써도 됨.
+
+- nesting 문법
+괄호 안에 태그를 적으면 스페이스바 한거랑 똑같다.
+-관련있는 class들 묶을 때 좋다.
+-두개 이상 중첩은 ㄴㄴ
+
+.main-bg h4 {
+    font-size: 16px;
+}
+
+.main-bg {
+    h4 {
+        font-size: 16px;
+    }
+}
+
+-@extend문법
+class전체를 복사해주는 문법
+변수와 다르게 여러 줄도 가능하다.
+
+예시로 빨간,파란,초록버튼이 필요할 때.
+중복되는 사항이 많다. -> 변수로 치환
+% : % 기호는 .대신 쓸 수 있는 임시클래스. 단독으로 컴파일이 되지 않는다. 
+CSS파일에서 클래스로 컴파일하지 않고싶을 때 쓰는 기호.
+컴파일하고나면 %기호 안에 있는 것들은 사라진다.
+
+%btn {
+  font-size : 16px;
+  padding : 10px;
+  background : grey;
+}
+
+.btn-green {
+  @extend %btn;
+  background : green;
+}
+---------------------
+.btn {
+  font-size : 16px;
+  padding : 10px;
+  background : grey;
+}
+
+.btn-green {
+  @extend .btn;
+  background : green;
+}
+
